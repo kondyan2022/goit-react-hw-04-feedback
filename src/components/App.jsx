@@ -15,13 +15,13 @@ export const App = () => {
     } = evt;
     switch (textContent) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevValue => prevValue + 1);
         return;
       case 'neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevValue => prevValue + 1);
         return;
       case 'bad':
-        setBad(bad + 1);
+        setBad(prevValue => prevValue + 1);
         return;
       default:
         return;
